@@ -1,0 +1,89 @@
+\documentclass[11pt, a4paper]{awesome-cv}
+%%% Override a directory location for fonts(default: 'fonts/')
+\fontdir[fonts/]
+%%% Configure a directory location for sections
+\newcommand*{\sectiondir}{resume/}
+\usepackage{tikz}
+
+
+%%% Override color
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+%% Color for highlight
+% Define your custom color if you don't like awesome colors
+%\colorlet{awesome}{awesome-red}
+\definecolor{awesome}{HTML}{96281B}
+\definecolor{urlcolor}{HTML}{B53527}
+%% Colors for text
+\definecolor{darktext}{HTML}{414141}
+%\definecolor{text}{HTML}{414141}
+%\definecolor{graytext}{HTML}{414141}
+%\definecolor{lighttext}{HTML}{414141}
+\definecolor{colorskillii}{HTML}{96281B}
+\definecolor{colorskilli}{HTML}{DADFE1}
+
+
+%%% Override a separator for social informations in header(default: ' | ')
+%\headersocialsep[\quad\textbar\quad]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     3rd party packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Needed to divide into several files
+\usepackage{import}
+\usepackage{hyperref}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Personal Data
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Essentials
+\name{João Pereira}{}
+\address{Rua da Igreja, Nº. 867 - Faria \enskip\cdotp\enskip 4755-204 Barcelos \enskip\cdotp\enskip Barcelos, Braga, Portugal}
+%\mobile{913 142 343}
+\email{pereiraffjoao1993@gmail.com}
+%%% Social
+\homepage{joaofpereira.github.io}
+\github{joaofpereira}
+\linkedin{jpereira93}
+\twitter{jfpereira93}
+%\orcid{0000-0001-9066-6436}
+%%% Optionals
+\position{Engineer{\enskip\cdotp\enskip}Developer{\enskip\cdotp\enskip} Researcher}
+%\quote{``Make the change that you want to see in the world."}
+
+\photo[circle,edge,left]{profile}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Make a footer for CV with three arguments(<left>, <center>, <right>)
+\makecvfooter
+  {\today}
+  {João Pereira~~~·~~~Curriculum Vitae}
+  {\thepage}
+
+\begin{document}
+%%% Make a header for CV with personal data
+\makecvheader
+
+
+%%% Import contents
+\import{\sectiondir}{summary.tex}
+\import{\sectiondir}{education.tex}
+\import{\sectiondir}{experience.tex}
+\import{\sectiondir}{extracurricular.tex}
+%\import{\sectiondir}{certifications.tex}
+\import{\sectiondir}{skills.tex}
+
+\hfill
+
+\import{\sectiondir}{publications.tex}
+%\import{\sectiondir}{research.tex}
+%\import{\sectiondir}{committees.tex}
+%\import{\sectiondir}{presentation.tex}
+\import{\sectiondir}{projects.tex}
+\import{\sectiondir}{honors.tex}
+%\import{\sectiondir}{referees.tex}
+
+
+
+\end{document}
